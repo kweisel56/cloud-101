@@ -41,37 +41,54 @@
                     {
                         "name": "subnet-eu2-core01-p02",
                         "properties": {
-                            "addressPrefix": "10.248.255.128/28"
+                            "addressPrefix": "10.248.255.128/28",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_nsg_eu2_admincore_p02_name'))]"
+                            }
                         }
                     },
                     {
                         "name": "subnet-eu2-appX-d01",
                         "properties": {
-                            "addressPrefix": "10.248.255.144/28"
+                            "addressPrefix": "10.248.255.144/28",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_nsg_eu2_admincore_p02_name'))]"
+                            }
                         }
                     },
                     {
                         "name": "subnet-eu2-appX-d02",
                         "properties": {
-                            "addressPrefix": "10.248.255.160/28"
+                            "addressPrefix": "10.248.255.160/28",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_nsg_eu2_admincore_p02_name'))]"
+                            }
                         }
                     },
                     {
                         "name": "subnet-eu2-appX-qa01",
                         "properties": {
-                            "addressPrefix": "10.248.255.176/28"
+                            "addressPrefix": "10.248.255.176/28",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_nsg_eu2_admincore_p02_name'))]"
+                            }
                         }
                     },
                     {
                         "name": "subnet-eu2-appX-p02",
                         "properties": {
-                            "addressPrefix": "10.248.255.192/28"
+                            "addressPrefix": "10.248.255.192/28",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_nsg_eu2_admincore_p02_name'))]"
+                            }
                         }
                     }
                 ]
             },
             "resources": [],
-            "dependsOn": []
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_nsg_eu2_admincore_p02_name'))]"
+            ]
         }
     ]
 }
