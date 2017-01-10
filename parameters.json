@@ -1,0 +1,12 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "networkSecurityGroups_nsg_eu2_admincore_p02_name": {
+            "value": null
+        },
+        "virtualNetworks_vnet_eu2_admincore_p01_name": {
+            "value": null
+        }
+    }
+}

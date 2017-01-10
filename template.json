@@ -1,0 +1,77 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "networkSecurityGroups_nsg_eu2_admincore_p02_name": {
+            "defaultValue": "nsg-eu2-admincore-p02",
+            "type": "String"
+        },
+        "virtualNetworks_vnet_eu2_admincore_p02_name": {
+            "defaultValue": "vnet-eu2-admincore-p02",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/8a62a5e2-d480-4382-a52f-af8496769d8d/resourceGroups/rg-eu2-admincore-p02/providers/Microsoft.Network/networkSecurityGroups/nsg-eu2-admincore-p02'.",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "[parameters('networkSecurityGroups_nsg_eu2_admincore_p02_name')]",
+            "apiVersion": "2016-03-30",
+            "location": "eastus2",
+            "properties": {
+                "securityRules": []
+            },
+            "resources": [],
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/8a62a5e2-d480-4382-a52f-af8496769d8d/resourceGroups/rg-eu2-admincore-p02/providers/Microsoft.Network/virtualNetworks/vnet-eu2-admincore-p02'.",
+            "type": "Microsoft.Network/virtualNetworks",
+            "name": "[parameters('virtualNetworks_vnet_eu2_admincore_p02_name')]",
+            "apiVersion": "2016-03-30",
+            "location": "eastus2",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "10.248.255.128/25"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "subnet-eu2-core01-p02",
+                        "properties": {
+                            "addressPrefix": "10.248.255.128/28"
+                        }
+                    },
+                    {
+                        "name": "subnet-eu2-appX-d01",
+                        "properties": {
+                            "addressPrefix": "10.248.255.144/28"
+                        }
+                    },
+                    {
+                        "name": "subnet-eu2-appX-d02",
+                        "properties": {
+                            "addressPrefix": "10.248.255.160/28"
+                        }
+                    },
+                    {
+                        "name": "subnet-eu2-appX-qa01",
+                        "properties": {
+                            "addressPrefix": "10.248.255.176/28"
+                        }
+                    },
+                    {
+                        "name": "subnet-eu2-appX-p02",
+                        "properties": {
+                            "addressPrefix": "10.248.255.192/28"
+                        }
+                    }
+                ]
+            },
+            "resources": [],
+            "dependsOn": []
+        }
+    ]
+}
