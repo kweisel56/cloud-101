@@ -2,11 +2,20 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "networkSecurityGroups_nsg_eu2_admincore_p02_name": {
-            "value": null
+        "adminUsername": {
+            "value": "## TO BE DEFINED ##"
         },
-        "virtualNetworks_vnet_eu2_admincore_p01_name": {
-            "value": null
+        "adminPassword": {
+            "value": "## TO BE DEFINED ##"
+        },
+        "dnsLabelPrefix": {
+            "value": "## TO BE DEFINED ##"
+        },
+        "windowsOSVersion": {
+            "value": "2016-Datacenter"
+        },
+        "location": {
+            "value": "[resourceGroup().location]"
         }
     }
 }
